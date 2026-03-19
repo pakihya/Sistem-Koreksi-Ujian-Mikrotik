@@ -1,0 +1,40 @@
+{
+  "ujian": {
+    "nama": "Ujian Praktik Dasar MikroTik",
+    "kode": "basicmikrotik",
+    "versi": "1.0"
+  },
+  "soal": [
+    {
+      "nomor": 1,
+      "tipe": "identity",
+      "deskripsi": "System identity sesuai nama siswa",
+      "bobot": 20,
+      "nama": "NAMA-SISWA",
+      "_catatan": "Nilai 'nama' ini di-override per siswa lewat tombol Edit di GUI"
+    },
+    {
+      "nomor": 2,
+      "tipe": "dhcp_client",
+      "deskripsi": "DHCP client aktif pada ether1",
+      "bobot": 20,
+      "interface": "ether1",
+      "disabled": "false"
+    },
+    {
+      "nomor": 3,
+      "tipe": "ip_address",
+      "deskripsi": "IP address LAN pada ether2",
+      "bobot": 30,
+      "address": "192.168.10.1/24",
+      "interface": "ether2"
+    },
+    {
+      "nomor": 4,
+      "tipe": "nat_masquerade",
+      "deskripsi": "NAT masquerade srcnat via ether1",
+      "bobot": 30,
+      "out_interface": "ether1"
+    }
+  ]
+}
